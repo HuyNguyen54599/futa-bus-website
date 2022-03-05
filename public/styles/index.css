@@ -73,16 +73,3 @@ button {
   margin: 0 auto;
   padding: 0 15px;
 }
-
-.box {
-  background-color: #a7f2eb;
-  font-size: 3rem;
-  color: violet;
-}
-
-.box i {
-  color: #f2b705;
-  font-size: 2rem;
-  padding: 2rem;
-  background-color: green;
-}
