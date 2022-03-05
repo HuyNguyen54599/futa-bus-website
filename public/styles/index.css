@@ -1,0 +1,88 @@
+@font-face {
+  font-family: "SFProText", sans-serif;
+  font-weight: 300;
+  src: url(./../fonts/FontsFree-Net-SFProText-Light-1.ttf);
+}
+@font-face {
+  font-family: "SFProText", sans-serif;
+  font-weight: 600;
+  src: url(./../fonts/FontsFree-Net-SFProText-Regular-1.ttf);
+}
+@font-face {
+  font-family: "SFProText", sans-serif;
+  font-weight: 900;
+  src: url(./../fonts/FontsFree-Net-SFProText-Semibold-1.ttf);
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "SFProText", sans-serif;
+  font-size: 1.4rem;
+  color: #637280;
+  line-height: 1;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+button,
+select,
+textarea {
+  outline: none;
+  font-family: "SFProText", sans-serif;
+  font-size: 1.4rem;
+}
+
+input,
+textarea {
+  line-height: normal;
+}
+
+button {
+  cursor: pointer;
+}
+
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 970px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.box {
+  background-color: #a7f2eb;
+  font-size: 3rem;
+  color: violet;
+}
+
+.box i {
+  color: #f2b705;
+  font-size: 2rem;
+  padding: 2rem;
+  background-color: green;
+}
