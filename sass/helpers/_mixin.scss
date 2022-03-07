@@ -80,6 +80,65 @@
     }
 }
 
+// custom scroll
+@mixin customScroll(
+    $widthBar: 0.5rem,
+    $thumbColor: $primary-color,
+    $thumbRound: 2rem,
+    $bgColorTrack: rgba($border-color, 0.8)
+) {
+    &::-webkit-scrollbar {
+        width: $widthBar;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: $bgColorTrack;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $thumbColor;
+        border-radius: $thumbRound;
+    }
+}
+
+@mixin letterSpace($space) {
+    letter-spacing: $space;
+    text-indent: -$space;
+}
+
+@mixin customRadio($size, $bgColor: white, $borderWidth: 1px, $borderColor: black, $checkColor: red, $checkSize: 1rem) {
+    @include size($size);
+    appearance: none;
+    cursor: pointer;
+    position: relative;
+    background-color: $bgColor;
+    border: $borderWidth solid $borderColor;
+    border-radius: 50%;
+    overflow: hidden;
+    &:checked::after {
+        display: inline-block;
+        content: "";
+        @include size($checkSize);
+        background-color: $checkColor;
+        border-radius: 50%;
+        @include positionElement("center", absolute);
+        box-shadow: 0 0 0rem 0rem rgba($checkColor, 0.5);
+        visibility: visible;
+        transition: all 0.2s ease;
+    }
+    &:not(:checked)::after {
+        display: inline-block;
+        content: "";
+        @include size($checkSize);
+        background-color: $checkColor;
+        border-radius: 50%;
+        @include positionElement("center", absolute);
+        box-shadow: 0 0 0.5rem 0.5rem rgba($checkColor, 0.5);
+        visibility: hidden;
+        transition: all 0.2s ease;
+    }
+}
+
 // responsive
 @mixin maxWidth($breakpoint) {
     @media screen and (max-width: $breakpoint) {

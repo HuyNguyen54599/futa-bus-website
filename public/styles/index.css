@@ -93,6 +93,9 @@ body {
   transform: translateY(-35px);
   box-shadow: 0 0.3rem 5rem 0 rgba(0, 0, 0, 0.4);
 }
+.header-up-responsive {
+  transform: translateY(-51px);
+}
 .header-top {
   height: 34px;
   padding: 0.2rem;
@@ -308,6 +311,7 @@ body {
     justify-content: space-between;
     align-items: center;
     align-content: normal;
+    box-shadow: 0 0.2rem 2rem 0 rgba(0, 0, 0, 0.4);
   }
   .header-up {
     transform: translateY(0);
@@ -326,12 +330,22 @@ body {
     bottom: 0;
     left: 0;
     width: 20rem;
-    overflow: hidden;
+    overflow-y: overlay;
     background-color: white;
     z-index: 99;
     padding: 1rem 0;
     transform: translateX(-100%);
     transition: all 0.5s ease;
+  }
+  .header-side-menu::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  .header-side-menu::-webkit-scrollbar-track {
+    background-color: rgba(220, 225, 230, 0.8);
+  }
+  .header-side-menu::-webkit-scrollbar-thumb {
+    background-color: #ef5222;
+    border-radius: 2rem;
   }
   .header-top, .header-wrapper, .header-bottom, .header-contact, .header-nav {
     display: block;
@@ -393,7 +407,7 @@ body {
 }
 .hero-swipe-slide {
   height: 38rem;
-  background-image: url(./../images/home-slick-slide1.jpg);
+  background-image: url(./../images/home-header-hero.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -417,4 +431,83 @@ body {
   .hero-swipe-slide {
     height: 15rem;
   }
+}
+
+.booking {
+  padding: 4rem 0;
+}
+.booking-form {
+  background-color: white;
+  padding: 2.5rem 2.5rem 4.5rem;
+  box-shadow: 4px 4px 20px 1px rgba(140, 140, 140, 0.4);
+  border-radius: 1.6rem;
+}
+.booking-options {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: normal;
+  gap: 2.5rem;
+}
+.booking-options-one-way, .booking-options-two-way {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: normal;
+  gap: 0.6rem;
+}
+.booking-options-one-way label, .booking-options-two-way label {
+  font-size: 1.4rem;
+  color: #333333;
+  font-weight: 600;
+  text-align: left;
+  letter-spacing: 0.05rem;
+  text-indent: -0.05rem;
+  cursor: pointer;
+}
+.booking-options-one-way input[type=radio], .booking-options-two-way input[type=radio] {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  appearance: none;
+  cursor: pointer;
+  position: relative;
+  background-color: white;
+  border: 0.1rem solid #ef5222;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.booking-options-one-way input[type=radio]:checked::after, .booking-options-two-way input[type=radio]:checked::after {
+  display: inline-block;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background-color: #ef5222;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0rem 0rem rgba(239, 82, 34, 0.5);
+  visibility: visible;
+  transition: all 0.2s ease;
+}
+.booking-options-one-way input[type=radio]:not(:checked)::after, .booking-options-two-way input[type=radio]:not(:checked)::after {
+  display: inline-block;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background-color: #ef5222;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0.5rem 0.5rem rgba(239, 82, 34, 0.5);
+  visibility: hidden;
+  transition: all 0.2s ease;
 }

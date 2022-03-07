@@ -1,0 +1,30 @@
+.booking {
+    padding: 4rem 0;
+    &-form {
+        background-color: white;
+        padding: 2.5rem 2.5rem 4.5rem;
+        box-shadow: 4px 4px 20px 1px hsl(0deg 0% 55% / 40%);
+        border-radius: 1.6rem;
+    }
+    &-options {
+        @include flexBox(flex, center);
+        gap: 2.5rem;
+        &-one-way,
+        &-two-way {
+            @include flexBox(flex, center);
+            gap: 0.6rem;
+            label {
+                font-size: 1.4rem;
+                color: $title-color;
+                font-weight: 600;
+                text-align: left;
+                @include letterSpace(0.05rem);
+                cursor: pointer;
+            }
+            input[type="radio"] {
+                display: inline-block;
+                @include customRadio(2rem, white, 0.1rem, $primary-color, $primary-color);
+            }
+        }
+    }
+}

@@ -14,6 +14,9 @@ body {
     &-up {
         transform: translateY(-(calc($header-top-height + 1px)));
         box-shadow: 0 0.3rem 5rem 0 rgba(#000000, 0.4);
+        &-responsive {
+            transform: translateY(-(calc($header-tablet-mobile-height + 1px)));
+        }
     }
     &-top {
         height: $header-top-height;
@@ -181,6 +184,7 @@ body {
         background-color: white;
         padding: 1rem 1rem 1rem 0rem;
         @include flexBox(flex, center, space-between);
+        box-shadow: 0 0.2rem 2rem 0 rgba(#000000, 0.4);
         &-up {
             transform: translateY(0);
             box-shadow: 0 0.1rem 3rem 0 rgba(#000000, 0.4);
@@ -198,7 +202,8 @@ body {
             bottom: 0;
             left: 0;
             width: 20rem;
-            overflow: hidden;
+            overflow-y: overlay;
+            @include customScroll();
             background-color: white;
             z-index: 99;
             padding: 1rem 0;

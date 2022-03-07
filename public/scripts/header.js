@@ -16,9 +16,18 @@ window.onclick = (e) => {
 }
 
 window.onscroll = (e) => {
-    if (document.body.scrollTop > 102 || document.documentElement.scrollTop > 102) {
-        header.classList.add('header-up');
+    if (screen.width > 969) {
+        if (document.body.scrollTop > 102 || document.documentElement.scrollTop > 102) {
+            header.classList.add('header-up');
+        } else {
+            header.classList.remove('header-up');
+        }
     } else {
-        header.classList.remove('header-up');
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            header.classList.add('header-up-responsive');
+        } else {
+            header.classList.remove('header-up-responsive');
+        }
     }
+
 }
