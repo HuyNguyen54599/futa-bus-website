@@ -86,7 +86,7 @@
                     </h1>
                 </a>
                 <ul class="header-nav">
-                    <li class="header-nav-item">
+                    <li class="header-nav-item header-nav-active">
                         <a href="#" class="header-nav-link">trang chủ</a>
                     </li>
                     <li class="header-nav-item">
@@ -132,7 +132,7 @@
                 <form class="booking-form">
                     <div class="booking-options">
                         <div class="booking-form-group booking-options-one-way">
-                            <input type="radio" name="type-of-way" id="options-one-way"></input>
+                            <input type="radio" name="type-of-way" id="options-one-way" checked></input>
                             <label for="options-one-way">Một chiều</label>
                         </div>
                         <div class="booking-form-group booking-options-two-way">
@@ -140,27 +140,35 @@
                             <label for="options-two-way">Khứ hồi</label>
                         </div>
                     </div>
-                    <div class="booking-route">
-                        <img src="./images/home-booking-swap.png" alt="" class="booking-route-swap">
-                        <div class="booking-form-group booking-route-departure">
-                            <label for="route-departure">Điểm đi</label>
-                            <input type="text" id="route-departure" placeholder="Chọn điểm đi">
+                    <div class="booking-infor">
+                        <div class="booking-route">
+                            <div class="booking-route-swap"><img src="./images/home-booking-swap.png" alt=""
+                                    class="booking-route-swap-img">
+                            </div>
+                            <div class="booking-form-group booking-route-item booking-route-departure">
+                                <label for="route-departure">Điểm đi</label>
+                                <input type="text" id="route-departure" placeholder="Chọn điểm đi">
+                            </div>
+                            <div class="booking-form-group booking-route-item booking-route-destination">
+                                <label for="route-destination">Điểm đến</label>
+                                <input type="text" id="route-destination" placeholder="Chọn điểm đến">
+                            </div>
                         </div>
-                        <div class="booking-form-group booking-route-destination">
-                            <label for="route-destination">Điểm đến</label>
-                            <input type="text" id="route-destination" placeholder="Chọn điểm đến">
+                        <div class="booking-date">
+                            <div class="booking-form-group booking-date-item booking-date-departure">
+                                <label for="date-departure">Ngày đi</label>
+                                <input type="date" name="" id="date-departure">
+                            </div>
+                            <div class="booking-form-group booking-date-item booking-date-destination">
+                                <label for="date-destination">Ngày về</label>
+                                <input type="date" name="" id="date-destination" disabled>
+                            </div>
                         </div>
                     </div>
-                    <div class="booking-date">
-                        <div class="booking-form-group booking-date-departure">
-                            <label for="date-departure">Ngày đi</label>
-                            <input type="date" name="" id="date-departure">
-                        </div>
-                        <div class="booking-form-group booking-date-destination">
-                            <label for="date-destination">Ngày về</label>
-                            <input type="date" name="" id="date-destination">
-                        </div>
-                    </div>
+                    <button class="booking-submit" type="submit">
+                        <i class="fa-solid fa-magnifying-glass booking-submit-icon"></i>
+                        <span class="booking-submit-text">tìm chuyến xe</span>
+                    </button>
                 </form>
             </div>
         </div>

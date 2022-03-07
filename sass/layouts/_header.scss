@@ -144,6 +144,11 @@ body {
 
     &-nav {
         @include flexBox(flex, center, space-between);
+        &-active {
+            .header-nav-link {
+                color: $primary-color;
+            }
+        }
         &-link {
             display: inline-block;
             width: 10.8rem;

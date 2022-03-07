@@ -16,6 +16,9 @@ window.onclick = (e) => {
 }
 
 window.onscroll = (e) => {
+    if (header.classList.contains('header-toggle-active')) {
+        return;
+    }
     if (screen.width > 969) {
         if (document.body.scrollTop > 102 || document.documentElement.scrollTop > 102) {
             header.classList.add('header-up');

@@ -124,7 +124,7 @@
         @include positionElement("center", absolute);
         box-shadow: 0 0 0rem 0rem rgba($checkColor, 0.5);
         visibility: visible;
-        transition: all 0.2s ease;
+        transition: all 0.1s ease;
     }
     &:not(:checked)::after {
         display: inline-block;
@@ -133,9 +133,9 @@
         background-color: $checkColor;
         border-radius: 50%;
         @include positionElement("center", absolute);
-        box-shadow: 0 0 0.5rem 0.5rem rgba($checkColor, 0.5);
+        box-shadow: 0 0 0.1rem 0.5rem rgba($checkColor, 0.5);
         visibility: hidden;
-        transition: all 0.2s ease;
+        transition: all 0.1s ease;
     }
 }
 
