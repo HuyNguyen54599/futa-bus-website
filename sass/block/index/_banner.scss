@@ -64,6 +64,9 @@
             &-link {
                 height: auto;
             }
+            &-img {
+                object-fit: fill;
+            }
         }
     }
 }
