@@ -19,7 +19,7 @@ const paths = {
         src: 'public/**/*.html'
     },
     scripts: {
-        src: 'public/scripts/**/*.js'
+        src: ['public/scripts/**/*.js', 'public/vendors/**/*.js']
     },
     browserSync: {
         baseDir: "public",
