@@ -15,6 +15,7 @@ window.onclick = (e) => {
     header.contains(e.target) || e.target.matches('.header-toggle') || header.classList.remove('header-toggle-active');
 }
 
+let lastScroll = 0;
 window.onscroll = (e) => {
     if (header.classList.contains('header-toggle-active')) {
         return;
@@ -31,6 +32,9 @@ window.onscroll = (e) => {
         } else {
             header.classList.remove('header-up-responsive');
         }
+        if (document.documentElement.scrollTop < lastScroll) {
+            header.classList.remove('header-up-responsive');
+        }
     }
-
+    lastScroll = document.documentElement.scrollTop;
 }

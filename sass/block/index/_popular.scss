@@ -20,7 +20,7 @@
         border-radius: 8px;
         overflow: hidden;
         background-color: $floating-bg-color;
-        border: 1px solid $border-color-floating;
+        outline: 1px solid $border-color-floating;
         transition: transform 0.4s ease;
         &:hover {
             z-index: 5;
