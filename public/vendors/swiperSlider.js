@@ -81,3 +81,28 @@ const secondSwiper = new Swiper('.recommend-swiper', {
         prevEl: '.recommend-swiper-button-prev',
     },
 });
+
+const thirdSwiper = new Swiper(".new-swiper", {
+    loop: true,
+    speed: 500,
+    autoplay: {
+        delay: 2500,
+    },
+
+
+    breakpoints: {
+        // when window width is >= 1200px
+        600: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+        },
+        480: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+        },
+        0: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+        }
+    }
+})
