@@ -77,9 +77,9 @@
             }
         }
         &-content {
-            @include positionElement("col-center");
-            width: 100%;
-            bottom: 0.5rem;
+            @include size(100%);
+            @include flexBox(flex, stretch, flex-end, column);
+            padding-bottom: 0.5rem;
             color: white;
             text-align: center;
             text-shadow: 0 0 2px #000;
@@ -105,8 +105,6 @@
 
     @include maxWidth(767.8px) {
         padding-top: 5rem;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;

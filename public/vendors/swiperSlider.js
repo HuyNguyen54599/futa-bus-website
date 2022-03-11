@@ -34,7 +34,6 @@ const swiper = new Swiper('.swiper', {
 const secondSwiper = new Swiper('.recommend-swiper', {
     direction: 'horizontal',
     loop: true,
-    grabCursor: true,
     centeredSlides: true,
     speed: 800,
     autoplay: {
@@ -66,7 +65,7 @@ const secondSwiper = new Swiper('.recommend-swiper', {
             slidesPerView: 3,
             spaceBetween: 50
         },
-        300: {
+        350: {
             slidesPerView: 3,
             spaceBetween: 20
         }

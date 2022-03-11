@@ -57,6 +57,7 @@
     text-overflow: ellipsis;
     width: $size;
     max-width: $size;
+    // white-space: nowrap;
     word-break: break-word;
 }
 
