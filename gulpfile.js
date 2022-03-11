@@ -32,6 +32,7 @@ function clean() {
 
 function browserSyncInit(done) {
     return browserSync.init({
+        files: ['public/index.html', 'public/views/schedule.html'],
         server: {
             baseDir: paths.browserSync.baseDir
         }
