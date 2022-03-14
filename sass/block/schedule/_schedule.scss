@@ -1,3 +1,6 @@
+.schedule-none .schedule-none-value {
+    display: block;
+}
 .schedule {
     margin-bottom: 2.5rem;
     table,
@@ -12,6 +15,18 @@
     th,
     td {
         text-align: center;
+    }
+
+    &-none-value {
+        display: none;
+        width: 100%;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+        padding: 20px;
+        background-image: radial-gradient(at center top, rgb(239, 82, 34), transparent),
+            radial-gradient(at center bottom, rgb(239, 82, 34), transparent);
     }
 
     &-head-row,
@@ -71,6 +86,9 @@
             width: calc(100% / 7);
             font-size: 1.4rem;
             color: $text-table-color;
+            &:nth-child(1) {
+                text-align: left;
+            }
             &:nth-child(1),
             &:nth-child(2) {
                 text-transform: capitalize;

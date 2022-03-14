@@ -551,6 +551,10 @@ body {
   }
 }
 
+.schedule-none .schedule-none-value {
+  display: block;
+}
+
 .schedule {
   margin-bottom: 2.5rem;
 }
@@ -571,6 +575,16 @@ body {
 .schedule th,
 .schedule td {
   text-align: center;
+}
+.schedule-none-value {
+  display: none;
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  padding: 20px;
+  background-image: radial-gradient(at center top, #ef5222, transparent), radial-gradient(at center bottom, #ef5222, transparent);
 }
 .schedule-head-row, .schedule-item-datarow, .schedule-item-head-responsive {
   padding: 0 6rem 0 2.5rem;
@@ -639,6 +653,9 @@ body {
   line-height: 1;
   padding: 1rem 0;
   background-color: white;
+}
+.schedule-item-data:nth-child(1) {
+  text-align: left;
 }
 .schedule-item-data:nth-child(1), .schedule-item-data:nth-child(2) {
   text-transform: capitalize;
