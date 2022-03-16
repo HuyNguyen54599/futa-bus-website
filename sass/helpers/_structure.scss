@@ -8,3 +8,9 @@
     margin: 0 auto;
     padding: 0 $mobile-tablet-padding;
 }
+
+.mini-container {
+    max-width: $mini-container + calc($mobile-tablet-padding * 2);
+    margin: 0 auto;
+    padding: 0 $mobile-tablet-padding;
+}

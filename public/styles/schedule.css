@@ -105,6 +105,12 @@ button {
   padding: 0 15px;
 }
 
+.mini-container {
+  max-width: 730px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 body {
   padding-top: 102px;
 }
@@ -118,6 +124,7 @@ body {
   left: 0;
   z-index: 10;
   transition: all 0.3s ease;
+  box-shadow: 0 1px 4px 0 rgba(128, 128, 128, 0.2);
 }
 .header-up {
   transform: translateY(-35px);

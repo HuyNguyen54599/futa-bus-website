@@ -11,6 +11,7 @@ body {
     left: 0;
     z-index: 10;
     transition: all 0.3s ease;
+    box-shadow: 0 1px 4px 0 rgb(128 128 128 / 20%);
     &-up {
         transform: translateY(-(calc($header-top-height + 1px)));
         box-shadow: 0 0.3rem 5rem 0 rgba(#000000, 0.4);
