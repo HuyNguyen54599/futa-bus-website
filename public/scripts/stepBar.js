@@ -5,7 +5,7 @@ class MyBookingStepBar extends HTMLElement {
         <div class="mini-container">
             <div class="step-bar">
                 <ul class="step-number">
-                    <li class="step-number-first step-number-item">
+                    <li class="step-number-first step-number-item step-number-processing">
                         <div class="step-number-title">chọn tuyến</div>
                         <div class="step-number-circles">1</div>
                     </li>
@@ -23,7 +23,7 @@ class MyBookingStepBar extends HTMLElement {
                     </li>
                 </ul>
                 <ul class="step-line">
-                    <li class="step-line-first step-line-item"></li>
+                    <li class="step-line-first step-line-item step-line-item-waiting"></li>
                     <li class="step-line-second step-line-item"></li>
                     <li class="step-line-third step-line-item"></li>
                 </ul>
@@ -34,10 +34,10 @@ class MyBookingStepBar extends HTMLElement {
     }
 }
 
-async function createHeader() {
+async function createStepBar() {
     await customElements.define('my-step-bar', MyBookingStepBar);
     let newStepBar = document.querySelector('my-step-bar');
     console.log(newStepBar);
 }
 
-createHeader();
+createStepBar();

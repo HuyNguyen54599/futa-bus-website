@@ -776,10 +776,11 @@ body {
   }
 }
 
-.step .step-bar {
+.step-bar {
   position: relative;
+  margin: 0 2.5rem;
 }
-.step .step-number {
+.step-number {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -787,34 +788,34 @@ body {
   align-items: center;
   align-content: normal;
 }
-.step .step-number-item {
+.step-number-item {
   position: relative;
   max-width: 10rem;
   text-align: center;
 }
-.step .step-number-processing .step-number-circles {
+.step-number-processing .step-number-circles {
   border: 2px solid #ef5222;
   color: #ef5222;
 }
-.step .step-number-processing .step-number-title {
+.step-number-processing .step-number-title {
   color: #ef5222;
 }
-.step .step-number-completed .step-number-circles {
+.step-number-completed .step-number-circles {
   color: white;
   background-color: #ef5222;
 }
-.step .step-number-completed .step-number-title {
+.step-number-completed .step-number-title {
   color: #ef5222;
 }
-.step .step-number-waiting .step-number-circles {
+.step-number-waiting .step-number-circles {
   color: #637280;
   background-color: #ededed;
   border: 2px solid #ededed;
 }
-.step .step-number-waiting .step-number-title {
+.step-number-waiting .step-number-title {
   color: #637280;
 }
-.step .step-number-circles {
+.step-number-circles {
   font-size: 1.2rem;
   font-weight: 600;
   position: relative;
@@ -826,7 +827,7 @@ body {
   place-items: center;
   z-index: 2;
 }
-.step .step-number-title {
+.step-number-title {
   width: 10rem;
   position: absolute;
   top: 50%;
@@ -839,7 +840,7 @@ body {
   font-weight: 600;
   text-transform: uppercase;
 }
-.step .step-line {
+.step-line {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -852,17 +853,112 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.step .step-line-item {
+.step-line-item {
   display: block;
   width: 33.3333333333%;
   height: 0.5rem;
   background-color: #ededed;
 }
-.step .step-line-item-completed {
+.step-line-item-completed {
   background-color: #ef5222;
 }
-.step .step-line-item-waiting {
+.step-line-item-waiting {
   background-color: #ededed;
+}
+
+.information {
+  padding-bottom: 6rem;
+}
+.information-tab {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  background-color: #00603d;
+  color: #b9b9b9;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.information-tab-item {
+  cursor: pointer;
+  padding: 1.1rem 0;
+  position: relative;
+}
+.information-tab-item.tab-active {
+  color: white;
+}
+.information-tab-item.tab-active::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.4rem;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+}
+.information-content {
+  border: 1px solid #dce1e6;
+  border-radius: 0 0px 8px 8px;
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+  background-color: #fff;
+}
+.information-content-block {
+  display: none;
+}
+.information-content-block.content-active {
+  display: block;
+}
+.information-content-item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: normal;
+  padding-bottom: 1.5rem;
+}
+.information-content-item:first-child {
+  column-gap: 0.5rem;
+}
+.information-content-item:nth-child(1) {
+  font-family: "SFProVietsub";
+  font-size: 1.5rem;
+  color: #ef5222;
+  text-transform: capitalize;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  text-indent: -0.05rem;
+}
+.information-content-item:nth-child(2) span:last-child, .information-content-item:nth-child(3) span:last-child {
+  font-family: "SFProVietsub";
+  font-size: 1.5rem;
+  color: #141414;
+  text-transform: capitalize;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  text-indent: -0.05rem;
+}
+.information-content-title {
+  font-size: 1.4rem;
+  letter-spacing: 0.05rem;
+  text-indent: -0.05rem;
+  margin-right: 0.5rem;
+}
+.information-station-value {
+  color: #141414;
+  letter-spacing: 0.05rem;
+  text-indent: -0.05rem;
+}
+.information-note {
+  font-family: "SFProVietsub";
+  font-style: italic;
+  letter-spacing: 0.05rem;
+  text-indent: -0.05rem;
+  font-weight: 100;
+  line-height: 1.2;
+  font-size: 1.5rem;
 }
 
 .footer {

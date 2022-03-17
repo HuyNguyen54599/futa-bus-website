@@ -1,8 +1,9 @@
 .step {
-    .step-bar {
+    &-bar {
         position: relative;
+        margin: 0 2.5rem;
     }
-    .step-number {
+    &-number {
         @include flexBox(flex, center, space-between);
         &-item {
             position: relative;
@@ -58,7 +59,7 @@
             text-transform: uppercase;
         }
     }
-    .step-line {
+    &-line {
         width: 100%;
         @include flexBox(flex, center, space-between);
         @include positionElement("center");
