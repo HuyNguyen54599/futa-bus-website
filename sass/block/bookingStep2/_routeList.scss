@@ -1,0 +1,154 @@
+.route {
+    &-topic {
+        font-size: 18px;
+        font-weight: 100;
+        margin-bottom: 18px;
+        padding: 0 16px;
+        color: $text-content-color;
+        @include letterSpace(0.05rem);
+        margin-bottom: 2.5rem;
+    }
+    &-list {
+    }
+    &-item {
+        background-color: white;
+        padding: 3rem 2rem 4rem 2rem;
+        border-radius: 8px;
+        border: 1px solid $border-route-color;
+        margin-bottom: 20px;
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+    &-head {
+        position: relative;
+        &-top {
+            @include flexBox(flex, center, space-between);
+            margin-bottom: 2rem;
+        }
+        &-timespan {
+            @include flexBox(flex, center);
+            column-gap: 1rem;
+        }
+        &-timestart,
+        &-timeend {
+            font-size: 2.5rem;
+            @include letterSpace(0.05rem);
+            color: $title-color;
+        }
+        &-arrow {
+            @include size(2.9rem, 0.8rem);
+            object-fit: cover;
+            margin-bottom: 0.5rem;
+        }
+        &-service {
+            @include flexBox(flex, center);
+            column-gap: 1rem;
+            i {
+                font-size: 1.3rem;
+                color: $icon-route-color;
+            }
+        }
+        &-des {
+            @include flexBox(flex, center, center);
+            column-gap: 1.8rem;
+            font-size: 1.5rem;
+            @include letterSpace(0.05rem);
+            color: $dot-color;
+            border-radius: 1.6rem;
+            padding: 0.8rem 1.2rem;
+            max-width: 32rem;
+            background-color: $wrapper-text-bg;
+            margin-bottom: 1.5rem;
+            div {
+                color: $text-bold-color;
+            }
+        }
+        &-detail {
+            @include flexBox(flex);
+            column-gap: 1.7rem;
+        }
+        &-content-detail {
+            padding: 0.3rem 0;
+            div:not(:last-child) {
+                margin-bottom: 2.2rem;
+            }
+        }
+        &-line-place {
+            position: relative;
+            @include flexBox(flex, center, space-between, column);
+            i {
+                font-size: 1.6rem;
+                color: $secondary-color;
+                position: relative;
+                z-index: 1;
+                &:last-child {
+                    font-size: 1.95rem;
+                    color: $primary-color;
+                }
+                background-color: white;
+            }
+        }
+        &-line-connect {
+            @include positionElement("center");
+            height: 100%;
+            width: 0.2rem;
+            right: 0.2rem;
+            border-left: 0.24rem dotted $border-dotted-color;
+        }
+        &-departure,
+        &-destination {
+            font-size: 1.5rem;
+            @include letterSpace(0.05rem);
+            color: $text-bold-color;
+            text-transform: capitalize;
+        }
+        &-content {
+            @include flexBox(flex, center);
+            @include letterSpace(0.05rem);
+            font-size: 1.3rem;
+            color: $secondary-color;
+            span {
+                margin-left: 0.5rem;
+            }
+        }
+    }
+    &-button {
+        position: absolute;
+        right: 0;
+        top: 10rem;
+        @include flexBox(flex, center, flex-start, column);
+        row-gap: 0.6rem;
+        input[type="radio"] {
+            @include size(2.5rem);
+            appearance: none;
+            cursor: pointer;
+            position: relative;
+            background-color: white;
+            border: 2px solid $icon-route-color;
+            border-radius: 50%;
+            overflow: hidden;
+            &:checked {
+                border: none;
+                background-color: $primary-color;
+                & + label {
+                    color: $primary-color;
+                }
+            }
+            &:checked::after {
+                display: inline-block;
+                content: "\2713";
+                border-radius: 50%;
+                font-size: 1.6rem;
+                font-weight: bold;
+                color: white;
+                @include positionElement("center", absolute);
+            }
+        }
+        label {
+            color: $secondary-normal-color;
+            @include letterSpace(0.05rem);
+            font-size: 1.3rem;
+        }
+    }
+}

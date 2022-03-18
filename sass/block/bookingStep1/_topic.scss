@@ -7,4 +7,9 @@
     font-weight: 700;
     color: $title-color;
     margin: 2.5rem 0 8rem 0;
+
+    @include maxWidth(767.8px) {
+        font-size: 2rem;
+        margin: 2rem 0 6rem 0;
+    }
 }

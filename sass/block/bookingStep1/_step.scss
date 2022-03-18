@@ -75,4 +75,27 @@
             }
         }
     }
+    @include maxWidth(767.8px) {
+        &-number {
+            &-title {
+                font-size: 1rem;
+                line-height: 1.5;
+                top: -1.8rem;
+            }
+            &-circles {
+                @include size(2.8rem);
+            }
+        }
+    }
+    @include maxWidth(375.8px) {
+        &-number {
+            &-title {
+                font-size: 0.9rem;
+                width: 6.7rem;
+            }
+            &-circles {
+                @include size(2.8rem);
+            }
+        }
+    }
 }

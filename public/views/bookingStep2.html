@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vé xe Phương Trang</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./../images/favicon.png" type="image/x-icon">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="">
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="./../styles/reset.css">
+    <!-- Boxicons -->
+    <link rel="stylesheet" href="./../vendors/boxicons-2.1.1/css/boxicons.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <!-- Swiper Slide -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./../styles/bookingStep2.css">
+    <!-- Create Header -->
+    <script type="module" src="./../scripts/header.js"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <my-header></my-header>
+    <!-- topic -->
+    <section class="topic">
+        <div class="mini-container">
+            <h2 class="topic-route">
+                <span class="topic-route-departure topic-route-item">bảo lộc</span>
+                -
+                <span class="topic-route-destination topic-route-item">TP.Hồ Chí Minh</span>
+            </h2>
+            <div class="topic-date">20/03/2022</div>
+        </div>
+    </section>
+    <!-- step bar -->
+    <my-step-bar-second></my-step-bar-second>
+    <!-- filter -->
+    <section class="filter">
+        <div class="mini-container">
+            <div class="filter-list">
+                <select name="filter-cost" id="#bk-cost" class="filter-item">
+                    <option value="0" class="filter-item-option">Giá</option>
+                    <option value="ASC" class="filter-item-option">Thấp - Cao</option>
+                    <option value="DESC" class="filter-item-option">Cao - Thấp</option>
+                </select>
+                <select name="filter-bus" id="#bk-bus" class="filter-item">
+                    <option value="0" class="filter-item-option">Loại xe</option>
+                    <option value="Chair" class="filter-item-option">Ghế</option>
+                    <option value="Bed" class="filter-item-option">Giường</option>
+                    <option value="Limousine" class="filter-item-option">Limousine</option>
+                </select>
+                <select name="filter-time" id="#bk-time" class="filter-item">
+                    <option value="0" class="filter-item-option">Giờ</option>
+                    <option value="0-6" class="filter-item-option">0h - 6h</option>
+                    <option value="6-12" class="filter-item-option">6h - 12h</option>
+                    <option value="12-18" class="filter-item-option">12h - 18h</option>
+                    <option value="18-24" class="filter-item-option">18h - 24h</option>
+                </select>
+            </div>
+        </div>
+    </section>
+    <!-- route -->
+    <section class="route">
+        <div class="mini-container">
+            <h3 class="route-topic">Chọn giờ lên xe đi <span class="route-topic-destination">TP.Hồ Chí Minh</span> từ
+                <span class="route-topic-departure">Châu Đốc</span> phù hợp
+            </h3>
+            <ul class="route-list">
+                <li class="route-item">
+                    <div class="route-head">
+                        <div class="route-head-top">
+                            <div class="route-head-timespan">
+                                <span class="route-head-timestart">00:00</span>
+                                <img src="./../images/booking2-route-arrwo.png" alt="" class="route-head-arrow">
+                                <span class="route-head-timeend">07:00</span>
+                            </div>
+                            <div class="route-head-service">
+                                <i class="fa-solid fa-bottle-water"></i>
+                                <i class="fa-solid fa-mattress-pillow"></i>
+                                <i class="fa-solid fa-wifi"></i>
+                            </div>
+                        </div>
+                        <div class="route-head-des">
+                            <div class="route-head-cost">165.000đ</div>
+                            &#9679;
+                            <div class="route-head-type">Giường</div>
+                            &#9679;
+                            <div class="route-head-rest">Còn 23 chỗ</div>
+                        </div>
+                        <div class="route-head-detail">
+                            <div class="route-head-line-place">
+                                <i class="fa-solid fa-circle-dot"></i>
+                                <div class="route-head-line-connect"></div>
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="route-head-content-detail">
+                                <div class="route-head-departure">bến xe châu đốc</div>
+                                <div class="route-head-content">Xe tuyến: <span class="route-head-content-value">240km -
+                                        7 tiếng</span>
+                                </div>
+                                <div class="route-head-destination">bến xe miền tây</div>
+                            </div>
+                        </div>
+                        <div class="route-button">
+                            <input type="radio" name="route-choosing" id="">
+                            <label for="">Chọn</label>
+                        </div>
+                    </div>
+                    <div class="route-seat"></div>
+                    <div class="route-result-control"></div>
+                </li>
+                <li class="route-item">
+                    <div class="route-head">
+                        <div class="route-head-top">
+                            <div class="route-head-timespan">
+                                <span class="route-head-timestart">00:00</span>
+                                <img src="./../images/booking2-route-arrwo.png" alt="" class="route-head-arrow">
+                                <span class="route-head-timeend">07:00</span>
+                            </div>
+                            <div class="route-head-service">
+                                <i class="fa-solid fa-bottle-water"></i>
+                                <i class="fa-solid fa-mattress-pillow"></i>
+                                <i class="fa-solid fa-wifi"></i>
+                            </div>
+                        </div>
+                        <div class="route-head-des">
+                            <div class="route-head-cost">165.000đ</div>
+                            &#9679;
+                            <div class="route-head-type">Giường</div>
+                            &#9679;
+                            <div class="route-head-rest">Còn 23 chỗ</div>
+                        </div>
+                        <div class="route-head-detail">
+                            <div class="route-head-line-place">
+                                <i class="fa-solid fa-circle-dot"></i>
+                                <div class="route-head-line-connect"></div>
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="route-head-content-detail">
+                                <div class="route-head-departure">bến xe châu đốc</div>
+                                <div class="route-head-content">Xe tuyến: <span class="route-head-content-value">240km -
+                                        7 tiếng</span>
+                                </div>
+                                <div class="route-head-destination">bến xe miền tây</div>
+                            </div>
+                        </div>
+                        <div class="route-button">
+                            <input type="radio" name="route-choosing" id="">
+                            <label for="">Chọn</label>
+                        </div>
+                    </div>
+                    <div class="route-seat"></div>
+                    <div class="route-result-control"></div>
+                </li>
+                <li class="route-item">
+                    <div class="route-head">
+                        <div class="route-head-top">
+                            <div class="route-head-timespan">
+                                <span class="route-head-timestart">00:00</span>
+                                <img src="./../images/booking2-route-arrwo.png" alt="" class="route-head-arrow">
+                                <span class="route-head-timeend">07:00</span>
+                            </div>
+                            <div class="route-head-service">
+                                <i class="fa-solid fa-bottle-water"></i>
+                                <i class="fa-solid fa-mattress-pillow"></i>
+                                <i class="fa-solid fa-wifi"></i>
+                            </div>
+                        </div>
+                        <div class="route-head-des">
+                            <div class="route-head-cost">165.000đ</div>
+                            &#9679;
+                            <div class="route-head-type">Giường</div>
+                            &#9679;
+                            <div class="route-head-rest">Còn 23 chỗ</div>
+                        </div>
+                        <div class="route-head-detail">
+                            <div class="route-head-line-place">
+                                <i class="fa-solid fa-circle-dot"></i>
+                                <div class="route-head-line-connect"></div>
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="route-head-content-detail">
+                                <div class="route-head-departure">bến xe châu đốc</div>
+                                <div class="route-head-content">Xe tuyến: <span class="route-head-content-value">240km -
+                                        7 tiếng</span>
+                                </div>
+                                <div class="route-head-destination">bến xe miền tây</div>
+                            </div>
+                        </div>
+                        <div class="route-button">
+                            <input type="radio" name="route-choosing" id="">
+                            <label for="">Chọn</label>
+                        </div>
+                    </div>
+                    <div class="route-seat"></div>
+                    <div class="route-result-control"></div>
+                </li>
+                <li class="route-item">
+                    <div class="route-head">
+                        <div class="route-head-top">
+                            <div class="route-head-timespan">
+                                <span class="route-head-timestart">00:00</span>
+                                <img src="./../images/booking2-route-arrwo.png" alt="" class="route-head-arrow">
+                                <span class="route-head-timeend">07:00</span>
+                            </div>
+                            <div class="route-head-service">
+                                <i class="fa-solid fa-bottle-water"></i>
+                                <i class="fa-solid fa-mattress-pillow"></i>
+                                <i class="fa-solid fa-wifi"></i>
+                            </div>
+                        </div>
+                        <div class="route-head-des">
+                            <div class="route-head-cost">165.000đ</div>
+                            &#9679;
+                            <div class="route-head-type">Giường</div>
+                            &#9679;
+                            <div class="route-head-rest">Còn 23 chỗ</div>
+                        </div>
+                        <div class="route-head-detail">
+                            <div class="route-head-line-place">
+                                <i class="fa-solid fa-circle-dot"></i>
+                                <div class="route-head-line-connect"></div>
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="route-head-content-detail">
+                                <div class="route-head-departure">bến xe châu đốc</div>
+                                <div class="route-head-content">Xe tuyến: <span class="route-head-content-value">240km -
+                                        7 tiếng</span>
+                                </div>
+                                <div class="route-head-destination">bến xe miền tây</div>
+                            </div>
+                        </div>
+                        <div class="route-button">
+                            <input type="radio" name="route-choosing" id="">
+                            <label for="">Chọn</label>
+                        </div>
+                    </div>
+                    <div class="route-seat"></div>
+                    <div class="route-result-control"></div>
+                </li>
+                <li class="route-item">
+                    <div class="route-head">
+                        <div class="route-head-top">
+                            <div class="route-head-timespan">
+                                <span class="route-head-timestart">00:00</span>
+                                <img src="./../images/booking2-route-arrwo.png" alt="" class="route-head-arrow">
+                                <span class="route-head-timeend">07:00</span>
+                            </div>
+                            <div class="route-head-service">
+                                <i class="fa-solid fa-bottle-water"></i>
+                                <i class="fa-solid fa-mattress-pillow"></i>
+                                <i class="fa-solid fa-wifi"></i>
+                            </div>
+                        </div>
+                        <div class="route-head-des">
+                            <div class="route-head-cost">165.000đ</div>
+                            &#9679;
+                            <div class="route-head-type">Giường</div>
+                            &#9679;
+                            <div class="route-head-rest">Còn 23 chỗ</div>
+                        </div>
+                        <div class="route-head-detail">
+                            <div class="route-head-line-place">
+                                <i class="fa-solid fa-circle-dot"></i>
+                                <div class="route-head-line-connect"></div>
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="route-head-content-detail">
+                                <div class="route-head-departure">bến xe châu đốc</div>
+                                <div class="route-head-content">Xe tuyến: <span class="route-head-content-value">240km -
+                                        7 tiếng</span>
+                                </div>
+                                <div class="route-head-destination">bến xe miền tây</div>
+                            </div>
+                        </div>
+                        <div class="route-button">
+                            <input type="radio" name="route-choosing" id="">
+                            <label for="">Chọn</label>
+                        </div>
+                    </div>
+                    <div class="route-seat"></div>
+                    <div class="route-result-control"></div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- footer -->
+    <my-footer></my-footer>
+    <script type="module" src="./../scripts/stepBar.js"></script>
+    <script type="module" src="./../scripts/footer.js"></script>
+</body>
+
+</html>

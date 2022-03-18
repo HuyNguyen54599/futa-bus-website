@@ -89,4 +89,11 @@
         line-height: 1.2;
         font-size: 1.5rem;
     }
+    @include maxWidth(375.8px) {
+        &-tab {
+            font-size: 1rem;
+            flex-wrap: wrap;
+            column-gap: 0.5rem;
+        }
+    }
 }
