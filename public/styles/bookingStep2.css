@@ -974,8 +974,20 @@ body {
   background-color: #fff;
 }
 .route-seat-title div {
+  cursor: pointer;
   width: 50%;
   padding: 2rem 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: normal;
+  column-gap: 1rem;
+}
+.route-seat-title div i {
+  font-size: 1.8rem;
+  display: none;
 }
 .route-seat-floor {
   display: flex;
@@ -1204,6 +1216,68 @@ body {
 .route-result-button i {
   padding-right: 1.5rem;
   font-size: 1.8rem;
+}
+@media screen and (max-width: 767.8px) {
+  .route-seat-title div.seat-title-active {
+    color: #ef5222;
+    border-bottom: 0.1rem solid #ef5222;
+  }
+  .route-seat-title div i {
+    display: block;
+  }
+  .route-seat-floor {
+    justify-content: center;
+  }
+  .route-seat-floor-item {
+    width: 100%;
+  }
+  .route-seat-floor-item.this-floor-not {
+    display: none;
+  }
+  .route-result-button {
+    padding: 1.5rem 2.5rem;
+  }
+  .route-result-button p {
+    padding: 0;
+  }
+  .route-result-button i {
+    font-size: 1.6rem;
+    padding-left: 1.5rem;
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 479.8px) {
+  .route-item {
+    padding-bottom: 3.5rem;
+  }
+  .route-head-des {
+    column-gap: 0.5rem;
+    justify-content: flex-start;
+    width: 100%;
+    letter-spacing: 0;
+    text-indent: 0;
+  }
+  .route-seat-item svg {
+    transform: scale(0.8);
+  }
+  .route-seat-e-item, .route-seat-a-item, .route-seat-d-item {
+    width: calc(50% - 0.6666666667rem);
+  }
+  .route-seat-note {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .route-result {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 2rem;
+  }
+  .route-result-button {
+    align-self: flex-end;
+  }
 }
 
 .step-nav {
