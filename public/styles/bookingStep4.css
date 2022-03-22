@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "SFProText", sans-serif;
   font-weight: 300;
@@ -739,6 +740,180 @@ body {
   .ticket-block-value {
     flex-wrap: wrap;
     word-wrap: break-word;
+  }
+}
+
+.payment {
+  margin-bottom: 3rem;
+}
+.payment-title {
+  font-family: "SFProVietsub";
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  color: #00613d;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.05rem;
+  text-indent: -0.05rem;
+}
+.payment-list {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: normal;
+  gap: 2rem 3rem;
+}
+.payment-item {
+  position: relative;
+  width: calc(33.3333333333% - 3rem - 1.3333333333rem);
+  padding: 1rem;
+  border: 1px dashed #dce1e6;
+  border-radius: 8px;
+  background-color: #f6f6f6;
+  cursor: pointer;
+}
+.payment-item.payment-method-active {
+  border: 1px dashed #ef5222;
+  background-color: rgba(239, 82, 34, 0.15);
+}
+.payment-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: normal;
+  column-gap: 0.5rem;
+}
+.payment-image {
+  height: 4rem;
+  object-fit: contain;
+  margin-top: 0.8rem;
+}
+.payment-des {
+  color: #141414;
+  font-size: 1.5rem;
+  letter-spacing: 0.05rem;
+  text-indent: -0.05rem;
+  margin: 1.2rem 0;
+  text-align: center;
+}
+.payment-radio {
+  width: 2.2rem;
+  height: 2.2rem;
+  appearance: none;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: white;
+  border: 2px solid #a2abb3;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.payment-radio:checked {
+  border: none;
+  background-color: #ef5222;
+}
+.payment-radio:checked + label {
+  color: #ef5222;
+}
+.payment-radio:checked::after {
+  display: inline-block;
+  content: "✓";
+  border-radius: 50%;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.payment-linking {
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+.payment-linking.type-international-active .payment-linking-text {
+  display: block;
+}
+.payment-linking.type-international-active .payment-international {
+  display: flex;
+}
+.payment-linking.type-international-active .payment-inland {
+  display: none;
+}
+.payment-linking.type-inland-active .payment-linking-text {
+  display: block;
+}
+.payment-linking.type-inland-active .payment-international {
+  display: none;
+}
+.payment-linking.type-inland-active .payment-inland {
+  display: flex;
+}
+.payment-linking-text {
+  display: none;
+  font-family: "SFProVietsub";
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #ef5222;
+  margin-bottom: 2.8rem;
+  letter-spacing: 0.05rem;
+  text-indent: -0.05rem;
+}
+.payment-international, .payment-inland {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: normal;
+  gap: 1.5rem;
+  display: none;
+}
+.payment-international-item, .payment-inland-item {
+  width: calc(16.6666666667% - 1.25rem);
+  padding: 0.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  display: grid;
+  place-content: center;
+  background-color: white;
+  border: 1px solid #dde2e8;
+}
+.payment-international-item img, .payment-inland-item img {
+  height: 4.9rem;
+  object-fit: contain;
+}
+@media screen and (max-width: 767.8px) {
+  .payment-item {
+    width: calc(50% - 1.5rem - 0.6666666667rem);
+  }
+}
+@media screen and (max-width: 509.8px) {
+  .payment-list {
+    padding: 0 2rem;
+    display: block;
+  }
+  .payment-item {
+    width: 100%;
+  }
+  .payment-item:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+  .payment-international, .payment-inland {
+    flex-wrap: wrap;
+  }
+  .payment-international-item, .payment-inland-item {
+    width: calc(33.3333333333% - 1rem);
+  }
+  .payment-international-item img, .payment-inland-item img {
+    height: 3.5rem;
   }
 }
 
