@@ -1,0 +1,143 @@
+.performance {
+    padding: 0 2.5rem;
+    @include flexBox(flex, stretch, space-between);
+    &-top {
+        width: 50%;
+        @include flexBox(flex, flex-start, flex-start, column);
+    }
+    &-list {
+        @include flexBox(flex, center, space-between, row, wrap);
+        row-gap: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+    &-item {
+        padding: 3rem 3.5rem;
+        width: calc(100% / 2 - 2.5rem / 2);
+        @include flexBox(flex, center, space-between);
+        border-radius: 8px;
+        background-color: white;
+        @include boxShadowAdmin();
+        &-icon {
+            color: rgba($primary-color, 0.8);
+            font-size: 3.8rem;
+        }
+        &-number {
+            font-family: "SFProVietsub";
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-transform: capitalize;
+            color: $title-color;
+            @include letterSpace(0.05rem);
+            margin-bottom: 1.6rem;
+        }
+        &-des {
+            font-family: "SFProVietsub";
+            font-size: 1.4rem;
+            font-weight: 300;
+            @include letterSpace(0.05rem);
+            color: $icon-route-color;
+        }
+    }
+    &-chart {
+        width: 100%;
+        background-color: white;
+        border-radius: 8px;
+        padding: 1rem;
+        @include boxShadowAdmin();
+    }
+    &-table {
+        width: calc(50% - 2.5rem);
+        &-wrapper {
+            padding: 1rem 0;
+            text-align: left;
+            background-color: white;
+            border-radius: 8px;
+            @include boxShadowAdmin();
+        }
+    }
+    &-tasks {
+        width: 100%;
+    }
+    &-head {
+        font-family: "SFProVietsub";
+        font-size: 1.4rem;
+        font-weight: 700;
+        text-transform: capitalize;
+        color: $title-color;
+        @include letterSpace(0.05rem);
+        th {
+            padding: 1rem 0 1.5rem;
+            &:first-child {
+                padding-left: 2rem;
+            }
+            &:last-child {
+                padding-right: 2rem;
+            }
+        }
+    }
+    &-row {
+        font-family: "SFProVietsub";
+        font-size: 1.3rem;
+        font-weight: 300;
+        text-transform: capitalize;
+        color: $title-color;
+        @include letterSpace(0.05rem);
+        &:hover {
+            background-color: rgba($primary-color, 0.1);
+            cursor: pointer;
+        }
+        td {
+            padding: 1rem 0;
+            &:first-child {
+                padding-left: 2rem;
+            }
+            &:last-child {
+                padding-right: 2rem;
+            }
+        }
+        &-status {
+            color: white;
+            width: 60px;
+            &.status-on-process {
+                span {
+                    display: inline-block;
+                    padding: 0.5rem;
+                    border-radius: 0.5rem;
+                    background-color: #79bfff;
+                }
+            }
+            &.status-on-review {
+                span {
+                    display: inline-block;
+                    padding: 0.5rem;
+                    border-radius: 0.5rem;
+                    background-color: #d486db;
+                }
+            }
+            &.status-on-cancel {
+                span {
+                    display: inline-block;
+                    padding: 0.5rem;
+                    border-radius: 0.5rem;
+                    background-color: #ff4848;
+                }
+            }
+            &.status-on-completed {
+                span {
+                    display: inline-block;
+                    padding: 0.5rem;
+                    border-radius: 0.5rem;
+                    background-color: $secondary-light-color;
+                }
+            }
+            &.status-on-pending {
+                span {
+                    display: inline-block;
+                    padding: 0.5rem;
+                    border-radius: 0.5rem;
+                    background-color: #ffc979;
+                }
+            }
+        }
+    }
+}

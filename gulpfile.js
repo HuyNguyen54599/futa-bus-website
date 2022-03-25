@@ -32,7 +32,7 @@ function clean() {
 
 function browserSyncInit(done) {
     return browserSync.init({
-        files: ['public/index.html', 'public/views/schedule.html', 'public/views/bookingStep1.html', 'public/views/bookingStep2.html', 'public/views/bookingStep2_confirm.html', 'public/views/bookingStep3.html', 'public/views/bookingStep4.html'],
+        files: ['public/index.html', 'public/views/schedule.html', 'public/views/bookingStep1.html', 'public/views/bookingStep2.html', 'public/views/bookingStep2_confirm.html', 'public/views/bookingStep3.html', 'public/views/bookingStep4.html', 'public/views/dashboard.html'],
         server: {
             baseDir: paths.browserSync.baseDir
         }

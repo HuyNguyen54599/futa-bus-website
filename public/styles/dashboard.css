@@ -1,0 +1,427 @@
+@font-face {
+  font-family: "SFProText", sans-serif;
+  font-weight: 300;
+  src: url(./../fonts/FontsFree-Net-SFProText-Light-1.ttf);
+}
+@font-face {
+  font-family: "SFProText", sans-serif;
+  font-weight: 600;
+  src: url(./../fonts/FontsFree-Net-SFProText-Regular-1.ttf);
+}
+@font-face {
+  font-family: "SFProText", sans-serif;
+  font-weight: 900;
+  src: url(./../fonts/FontsFree-Net-SFProText-Semibold-1.ttf);
+}
+@font-face {
+  font-family: "SFProVietsub";
+  font-weight: 100;
+  src: url(./../fonts/SF-Pro-Display-Light.otf);
+}
+@font-face {
+  font-family: "SFProVietsub";
+  font-weight: 300;
+  src: url(./../fonts/SF-Pro-Display-Regular.otf);
+}
+@font-face {
+  font-family: "SFProVietsub";
+  font-weight: 500;
+  src: url(./../fonts/SF-Pro-Display-Medium.otf);
+}
+@font-face {
+  font-family: "SFProVietsub";
+  font-weight: 600;
+  src: url(./../fonts/SF-Pro-Display-Semibold.otf);
+}
+@font-face {
+  font-family: "SFProVietsub";
+  font-weight: 700;
+  src: url(./../fonts/SF-Pro-Display-Bold.otf);
+}
+@font-face {
+  font-family: "SFProVietsub";
+  font-weight: 900;
+  src: url(./../fonts/SF-Pro-Display-Heavy.otf);
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "SFProText", sans-serif;
+  font-size: 1.4rem;
+  color: #637280;
+  line-height: 1;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+input,
+button,
+select,
+textarea {
+  outline: none;
+  font-family: "SFProText", sans-serif;
+  font-size: 1.4rem;
+}
+
+input,
+textarea {
+  line-height: normal;
+}
+
+button {
+  cursor: pointer;
+}
+
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 970px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.mini-container {
+  max-width: 730px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.sidebar {
+  position: relative;
+  z-index: 99;
+  padding: 1rem 1.5rem 0;
+  width: 30rem;
+  height: 100vh;
+  box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
+  border: 1px solid rgba(192, 198, 204, 0.2);
+}
+.sidebar-logo {
+  display: block;
+  padding: 1rem 2rem 2rem;
+  margin-bottom: 1rem;
+}
+.sidebar-logo-img {
+  object-fit: cover;
+}
+.sidebar-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: normal;
+}
+.sidebar-item {
+  width: 100%;
+  border-radius: 1.6rem;
+}
+.sidebar-item.sidebar-active {
+  background-color: #f15a24;
+  color: white;
+}
+.sidebar-link {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: normal;
+  padding: 1.5rem;
+}
+.sidebar-link-icon {
+  font-size: 1.75rem;
+}
+.sidebar-link-text {
+  font-family: "SFProVietsub";
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  text-indent: -0.05rem;
+  margin-left: 1.2rem;
+  text-transform: capitalize;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: normal;
+}
+
+.main {
+  width: 100%;
+  background-color: #fafafa;
+}
+
+.dashboard-title {
+  font-family: "SFProVietsub";
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 1.8rem;
+  letter-spacing: 0.05rem;
+  text-indent: -0.05rem;
+  color: #333333;
+  padding: 3rem 0 2rem;
+}
+
+.header {
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: normal;
+}
+.header-search {
+  position: relative;
+  color: #637280;
+  width: 40rem;
+}
+.header-search-input {
+  box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
+  border: 1px solid rgba(192, 198, 204, 0.2);
+  border-radius: 1rem;
+  display: block;
+  width: 100%;
+  padding: 1.2rem 1.5rem;
+  color: #141414;
+}
+.header-search-icon {
+  font-size: 1.8rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1.5rem;
+}
+.header-user {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: normal;
+  column-gap: 1.2rem;
+  box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
+  border: 1px solid rgba(192, 198, 204, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 1.6rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.header-user:hover {
+  background-color: rgba(239, 82, 34, 0.2);
+}
+.header-user-avatar {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.header-user-info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: normal;
+  padding: 0.3rem 0;
+}
+.header-user-name {
+  font-family: "SFProVietsub";
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: #111111;
+}
+.header-user-position {
+  font-size: 1.3rem;
+  color: #637280;
+}
+
+.performance {
+  padding: 0 2.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: normal;
+}
+.performance-top {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: normal;
+}
+.performance-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: normal;
+  row-gap: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+.performance-item {
+  padding: 3rem 3.5rem;
+  width: calc(50% - 1.25rem);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: normal;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
+  border: 1px solid rgba(192, 198, 204, 0.2);
+}
+.performance-item-icon {
+  color: rgba(239, 82, 34, 0.8);
+  font-size: 3.8rem;
+}
+.performance-item-number {
+  font-family: "SFProVietsub";
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #333333;
+  letter-spacing: 0.05rem;
+  text-indent: -0.05rem;
+  margin-bottom: 1.6rem;
+}
+.performance-item-des {
+  font-family: "SFProVietsub";
+  font-size: 1.4rem;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+  text-indent: -0.05rem;
+  color: #a2abb3;
+}
+.performance-chart {
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
+  border: 1px solid rgba(192, 198, 204, 0.2);
+}
+.performance-table {
+  width: calc(50% - 2.5rem);
+}
+.performance-table-wrapper {
+  padding: 1rem 0;
+  text-align: left;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
+  border: 1px solid rgba(192, 198, 204, 0.2);
+}
+.performance-tasks {
+  width: 100%;
+}
+.performance-head {
+  font-family: "SFProVietsub";
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #333333;
+  letter-spacing: 0.05rem;
+  text-indent: -0.05rem;
+}
+.performance-head th {
+  padding: 1rem 0 1.5rem;
+}
+.performance-head th:first-child {
+  padding-left: 2rem;
+}
+.performance-head th:last-child {
+  padding-right: 2rem;
+}
+.performance-row {
+  font-family: "SFProVietsub";
+  font-size: 1.3rem;
+  font-weight: 300;
+  text-transform: capitalize;
+  color: #333333;
+  letter-spacing: 0.05rem;
+  text-indent: -0.05rem;
+}
+.performance-row:hover {
+  background-color: rgba(239, 82, 34, 0.1);
+  cursor: pointer;
+}
+.performance-row td {
+  padding: 1rem 0;
+}
+.performance-row td:first-child {
+  padding-left: 2rem;
+}
+.performance-row td:last-child {
+  padding-right: 2rem;
+}
+.performance-row-status {
+  color: white;
+  width: 60px;
+}
+.performance-row-status.status-on-process span {
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #79bfff;
+}
+.performance-row-status.status-on-review span {
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #d486db;
+}
+.performance-row-status.status-on-cancel span {
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #ff4848;
+}
+.performance-row-status.status-on-completed span {
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #009344;
+}
+.performance-row-status.status-on-pending span {
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #ffc979;
+}

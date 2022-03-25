@@ -1,0 +1,69 @@
+body {
+    @include flexBox(flex);
+}
+.main {
+    width: 100%;
+    background-color: $floating-bg-color;
+}
+.dashboard-title {
+    font-family: "SFProVietsub";
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    @include letterSpace(0.05rem);
+    color: $title-color;
+    padding: 3rem 0 2rem;
+}
+.header {
+    padding: 2rem 2.5rem;
+    @include flexBox(flex, center, space-between);
+    &-search {
+        position: relative;
+        color: $text-color;
+        width: 40rem;
+        &-input {
+            @include boxShadowAdmin();
+            border-radius: 1rem;
+            display: block;
+            width: 100%;
+            padding: 1.2rem 1.5rem;
+            color: $text-content-color;
+        }
+        &-icon {
+            font-size: 1.8rem;
+            @include positionElement("row-center");
+            right: 1.5rem;
+        }
+    }
+    &-user {
+        @include flexBox(flex, stretch);
+        column-gap: 1.2rem;
+        @include boxShadowAdmin();
+        padding: 0.5rem 1rem;
+        border-radius: 1.6rem;
+        cursor: pointer;
+        transition: 0.3s ease;
+        &:hover {
+            background-color: rgba($primary-color, 0.2);
+        }
+        &-avatar {
+            @include size(4.5rem);
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        &-info {
+            @include flexBox(flex, flex-start, space-between, column);
+            padding: 0.3rem 0;
+        }
+        &-name {
+            font-family: "SFProVietsub";
+            font-weight: 600;
+            font-size: 1.6rem;
+            color: $text-bold-color;
+        }
+        &-position {
+            font-size: 1.3rem;
+            color: $text-color;
+        }
+    }
+}

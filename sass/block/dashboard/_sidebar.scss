@@ -1,0 +1,41 @@
+.sidebar {
+    position: relative;
+    z-index: 99;
+    padding: 1rem 1.5rem 0;
+    @include size(30rem, 100vh);
+    @include boxShadowAdmin();
+    &-logo {
+        display: block;
+        padding: 1rem 2rem 2rem;
+        margin-bottom: 1rem;
+        &-img {
+            object-fit: cover;
+        }
+    }
+    &-list {
+        @include flexBox(flex, flex-start, flex-start, column);
+    }
+    &-item {
+        width: 100%;
+        border-radius: 1.6rem;
+        &.sidebar-active {
+            background-color: $primary-light-color;
+            color: white;
+        }
+    }
+    &-link {
+        width: 100%;
+        @include flexBox(flex, center);
+        padding: 1.5rem;
+        &-icon {
+            font-size: 1.75rem;
+        }
+        &-text {
+            font-family: "SFProVietsub";
+            font-weight: 600;
+            @include letterSpace(0.05rem);
+            margin-left: 1.2rem;
+            text-transform: capitalize;
+        }
+    }
+}
