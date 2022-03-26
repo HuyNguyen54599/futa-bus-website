@@ -8,7 +8,7 @@ var options = {
     }],
     colors: ['#ff6855', '#009344'],
     chart: {
-        height: 350,
+        height: 260,
         type: 'line',
     },
     dataLabels: {
@@ -42,7 +42,7 @@ var options = {
         offsetY: 0,
         floating: false,
         style: {
-            fontSize: '18px',
+            fontSize: '16px',
             fontWeight: '700',
             fontFamily: 'SFProVietsub',
             color: '#333333'
@@ -52,3 +52,39 @@ var options = {
 
 var chart = new ApexCharts(document.querySelector(".performance-chart"), options);
 chart.render();
+
+var option_pie = {
+    series: [53, 55, 59, 17, 10],
+    labels: ['Ticket', 'Express', 'Package', 'Invest', 'Other'],
+    chart: {
+        type: 'donut',
+        height: 280,
+    },
+    dataLabels: {
+        enabled: true,
+        style: {
+            fontSize: '10px',
+            fontWeight: '100',
+            color: '#333333',
+            fontFamily: 'SFProVietsub',
+        },
+    },
+    colors: ['#d486db', '#ffc979', '#79bfff', '#009344', '#ff4848'],
+    title: {
+        text: 'Income StatisticIncome',
+        align: 'left',
+        style: {
+            fontSize: '16px',
+            fontWeight: '700',
+            fontFamily: 'SFProVietsub',
+            color: '#333333',
+        },
+    },
+    legend: {
+        offsetY: 0,
+        position: 'bottom',
+    }
+};
+
+var chart_pie = new ApexCharts(document.querySelector(".performance-pie"), option_pie);
+chart_pie.render();

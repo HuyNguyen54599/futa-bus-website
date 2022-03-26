@@ -1,15 +1,42 @@
 .sidebar {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
     z-index: 99;
     padding: 1rem 1.5rem 0;
-    @include size(30rem, 100vh);
+    width: 21rem;
+    background-color: white;
     @include boxShadowAdmin();
+    transition: all 0.3s ease;
+    &.sidebar-move-margin {
+        width: 10rem;
+        & .sidebar-logo {
+            padding: 0rem 0rem 1rem;
+        }
+        & .sidebar-logo-mini {
+            display: block;
+        }
+        & .sidebar-logo-img {
+            display: none;
+        }
+        & .sidebar-link {
+            justify-content: center;
+        }
+        & .sidebar-link-text {
+            display: none;
+        }
+    }
     &-logo {
         display: block;
-        padding: 1rem 2rem 2rem;
+        padding: 1rem 1rem 2rem;
         margin-bottom: 1rem;
         &-img {
             object-fit: cover;
+        }
+        &-mini {
+            object-fit: cover;
+            display: none;
         }
     }
     &-list {
@@ -17,7 +44,9 @@
     }
     &-item {
         width: 100%;
-        border-radius: 1.6rem;
+        border-radius: 1rem;
+        margin-bottom: 0.5rem;
+        transition: all 0.3s ease;
         &.sidebar-active {
             background-color: $primary-light-color;
             color: white;
@@ -26,9 +55,15 @@
     &-link {
         width: 100%;
         @include flexBox(flex, center);
-        padding: 1.5rem;
+        padding: 1.2rem;
+        border-radius: 1rem;
+        transition: all 0.3s ease;
+        &:hover {
+            color: white;
+            background-color: $primary-light-color;
+        }
         &-icon {
-            font-size: 1.75rem;
+            font-size: 1.5rem;
         }
         &-text {
             font-family: "SFProVietsub";
@@ -36,6 +71,30 @@
             @include letterSpace(0.05rem);
             margin-left: 1.2rem;
             text-transform: capitalize;
+            font-size: 1.3rem;
+        }
+    }
+    @include maxWidth(549.8px) {
+        width: 21rem;
+        margin-left: -21rem;
+        &.sidebar-move-margin {
+            width: 21rem;
+            margin-left: 0;
+            & .sidebar-logo {
+                padding: 0rem 0rem 1rem;
+            }
+            & .sidebar-logo-mini {
+                display: none;
+            }
+            & .sidebar-logo-img {
+                display: block;
+            }
+            & .sidebar-link {
+                justify-content: left;
+            }
+            & .sidebar-link-text {
+                display: block;
+            }
         }
     }
 }
