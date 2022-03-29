@@ -6,6 +6,7 @@ body {
     background-color: $floating-bg-color;
     padding-left: 21rem;
     transition: all 0.3s ease;
+    position: relative;
     &-overlay {
         position: fixed;
         top: 0;
@@ -216,7 +217,18 @@ body {
             line-height: 1.5rem;
             &:not(:last-child) {
                 margin-bottom: 1rem;
+                border-bottom: 1px solid $border-color;
             }
+            padding: 0.5rem;
+        }
+        &-n-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: $title-color;
+        }
+        &-n-text {
+            font-size: 1.2rem;
         }
     }
 
