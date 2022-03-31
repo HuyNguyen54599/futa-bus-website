@@ -437,6 +437,7 @@
             background-color: $primary-color;
             text-align: center;
             @include flexBox(flex, center, space-between);
+            cursor: pointer;
             p {
                 padding: 1.5rem 12rem;
             }
