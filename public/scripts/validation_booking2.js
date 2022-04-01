@@ -101,6 +101,7 @@ function continueValidationSeat(seatChoosing) {
 
 function alertSeatChoosingError(result, errorMessage) {
     if (result === false) {
+
         errorBox.innerHTML = `<li class="error-item">${errorMessage}</li>`
 
         errorBox.parentElement.classList.add('error-validation-active');
