@@ -8,6 +8,8 @@ allRoutes.forEach(route => {
 
     let seatChoosing = [];
 
+    let totalCost = 0;
+
     allSeats.forEach(seat => {
         seat.onclick = () => {
             handleChoosingSeat(seat, seatChoosing);
@@ -15,14 +17,22 @@ allRoutes.forEach(route => {
             let { result, errorMessage } = SeatValidationLimitChoosing(seat, seatChoosing);
 
             alertSeatChoosingError(result, errorMessage);
+
+            displaySeatAndCost(seatChoosing, route);
         }
     });
 
     continueButton.onclick = () => {
         let { result, errorMessage } = continueValidationSeat(seatChoosing);
-        alertSeatChoosingError(result, errorMessage);
-    }
 
+        alertSeatChoosingError(result, errorMessage);
+
+        if (result) {
+            let seatsNumber = getSeatNumber(seatChoosing);
+            let totalCost = totalTicketCost(seatChoosing, route);
+            getDataForLocalStorage(seatsNumber, totalCost, route);
+        }
+    }
 
 });
 
@@ -99,4 +109,47 @@ function alertSeatChoosingError(result, errorMessage) {
             errorBox.parentElement.classList.remove('error-validation-active');
         }, 5000);
     }
+}
+
+function displaySeatAndCost(seats, route) {
+    let costVisible = route.querySelector('.route-result-cost-value');
+    let totalCost = totalTicketCost(seats, route);
+    let seatVisible = route.querySelector('.route-result-name');
+
+    seatVisible.innerHTML = seats.map((seat, index) => {
+        return `<span class="route-result-name-ticket">${seat.innerText}</span>`;
+    });
+
+    costVisible.innerHTML = `${totalCost}.000<span>&#8363;</span>`
+}
+
+function getSeatNumber(seats) {
+    return seats.map(seat => seat.innerText);
+}
+
+function totalTicketCost(seats, route) {
+    let routeCost = route.querySelector('.route-head-cost');
+    return routeCost.innerHTML.slice(0, -1) * seats.length;
+}
+
+function getDataForLocalStorage(seats, totalCost, route) {
+    let busType = route.querySelector('.route-head-type').innerHTML;
+
+    let timeStart = route.querySelector('.route-head-timestart').innerHTML;
+
+    let timeEnd = route.querySelector('.route-head-timeend').innerHTML;
+
+    let dataBooking = JSON.parse(window.localStorage.getItem('dataBooking'));
+
+    let data = {
+        ...dataBooking, ...{
+            seats,
+            totalCost,
+            busType,
+            timeStart,
+            timeEnd
+        }
+    }
+
+    window.localStorage.setItem('dataBooking', JSON.stringify(data));
 }
