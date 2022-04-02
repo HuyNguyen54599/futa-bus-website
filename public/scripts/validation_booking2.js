@@ -6,6 +6,8 @@ allRoutes.forEach(route => {
 
     let continueButton = route.querySelector('.route-result-button');
 
+    let routeCost = parseFloat(route.querySelector('.route-head-cost').innerHTML.slice(0, -1));
+
     let seatChoosing = [];
 
     let totalCost = 0;
@@ -18,7 +20,7 @@ allRoutes.forEach(route => {
 
             alertSeatChoosingError(result, errorMessage);
 
-            displaySeatAndCost(seatChoosing, route);
+            displaySeatAndCost(seatChoosing, route, routeCost);
         }
     });
 
@@ -29,8 +31,8 @@ allRoutes.forEach(route => {
 
         if (result) {
             let seatsNumber = getSeatNumber(seatChoosing);
-            let totalCost = totalTicketCost(seatChoosing, route);
-            getDataForLocalStorage(seatsNumber, totalCost, route);
+            let totalCost = totalTicketCost(seatChoosing, routeCost);
+            getDataForLocalStorage(seatsNumber, routeCost, totalCost, route);
         }
     }
 
@@ -112,15 +114,17 @@ function alertSeatChoosingError(result, errorMessage) {
     }
 }
 
-function displaySeatAndCost(seats, route) {
+function displaySeatAndCost(seats, route, routeCost) {
     let costVisible = route.querySelector('.route-result-cost-value');
-    let totalCost = totalTicketCost(seats, route);
+    let totalCost = totalTicketCost(seats, routeCost);
     let seatVisible = route.querySelector('.route-result-name');
+    let seatCount = route.querySelector('.route-result-count-value');
 
     seatVisible.innerHTML = seats.map((seat, index) => {
         return `<span class="route-result-name-ticket">${seat.innerText}</span>`;
     });
 
+    seatCount.innerHTML = seats.length;
     costVisible.innerHTML = `${totalCost}.000<span>&#8363;</span>`
 }
 
@@ -128,12 +132,11 @@ function getSeatNumber(seats) {
     return seats.map(seat => seat.innerText);
 }
 
-function totalTicketCost(seats, route) {
-    let routeCost = route.querySelector('.route-head-cost');
-    return routeCost.innerHTML.slice(0, -1) * seats.length;
+function totalTicketCost(seats, routeCost) {
+    return routeCost * seats.length;
 }
 
-function getDataForLocalStorage(seats, totalCost, route) {
+function getDataForLocalStorage(seats, ticketCost, totalCost, route) {
     let busType = route.querySelector('.route-head-type').innerHTML;
 
     let timeStart = route.querySelector('.route-head-timestart').innerHTML;
@@ -145,6 +148,7 @@ function getDataForLocalStorage(seats, totalCost, route) {
     let data = {
         ...dataBooking, ...{
             seats,
+            ticketCost,
             totalCost,
             busType,
             timeStart,
