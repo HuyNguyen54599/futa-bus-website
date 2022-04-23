@@ -41,24 +41,24 @@
             <div class="customer-wrapper">
                 <div class="customer-form customer-block">
                     <h3 class="customer-title">thông tin hành khách</h3>
-                    <form action="">
-                        <div class="customer-field form-group-name">
+                    <form action="" class="form-validation">
+                        <div class="customer-field form-group-name form-group">
                             <label for="customer-name" class="customer-field-label">Họ tên hành khách *</label>
                             <input type="text" name="" id="customer-name" class="customer-field-input"
                                 placeholder="Họ và tên">
                         </div>
-                        <div class="customer-field form-group-phone">
+                        <div class="customer-field form-group-phone form-group">
                             <label for="customer-phone" class="customer-field-label">Số điện thoại *</label>
                             <input type="text" name="" id="customer-phone" class="customer-field-input"
                                 placeholder="Nhập số điện thoại">
                         </div>
-                        <div class="customer-field form-group-email">
+                        <div class="customer-field form-group-email form-group">
                             <label for="customer-email" class="customer-field-label">Email *</label>
                             <input type="text" name="" id="customer-email" class="customer-field-input"
                                 placeholder="Nhập email">
                         </div>
                         <div class="customer-location">
-                            <div class="customer-field customer-location-item form-group-city">
+                            <div class="customer-field customer-location-item form-group-city form-group">
                                 <label for="customer-city" class="customer-field-label">Tỉnh/TP *</label>
                                 <select name="" id="customer-city" class="customer-field-input">
                                     <option value="" selected disabled hidden>Chọn quận/huyện</option>
@@ -77,7 +77,7 @@
                                     <option value="ss">ss</option>
                                 </select>
                             </div>
-                            <div class="customer-field customer-location-item form-group-district">
+                            <div class="customer-field customer-location-item form-group-district form-group">
                                 <label for="customer-district" class="customer-field-label">Quận/Huyện *</label>
                                 <select name="" id="customer-district" class="customer-field-input">
                                     <option value="" selected disabled hidden>Chọn tỉnh/TP</option>
@@ -97,7 +97,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="customer-field customer-terms form-group-terms">
+                        <div class="customer-field customer-terms form-group-terms form-group">
                             <input type="checkbox" name="" id="checkbox-terms">
                             <label for="checkbox-terms" class="customer-terms-label">
                                 Chấp nhận
@@ -144,7 +144,7 @@
                     <i class="fa-solid fa-angle-left"></i>
                     Quay lại
                 </div>
-                <div class="step-nav-button step-next-btn">
+                <div class="step-nav-button step-next-btn form-submit-validation">
                     Tiếp tục
                     <i class="fa-solid fa-angle-right"></i>
                 </div>
@@ -155,6 +155,7 @@
     <my-footer></my-footer>
     <script type="module" src="./../scripts/stepBar.js"></script>
     <script type="module" src="./../scripts/footer.js"></script>
+    <script src="./../scripts/validation_mold.js"></script>
 </body>
 
 </html>
