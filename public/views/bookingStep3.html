@@ -44,23 +44,24 @@
                     <form action="" class="form-validation">
                         <div class="customer-field form-group-name form-group">
                             <label for="customer-name" class="customer-field-label">Họ tên hành khách *</label>
-                            <input type="text" name="" id="customer-name" class="customer-field-input"
-                                placeholder="Họ và tên">
+                            <input data-type="name" type="text" name="Ho va Ten" id="customer-name"
+                                class="customer-field-input" placeholder="Họ và tên">
                         </div>
                         <div class="customer-field form-group-phone form-group">
                             <label for="customer-phone" class="customer-field-label">Số điện thoại *</label>
-                            <input type="text" name="" id="customer-phone" class="customer-field-input"
-                                placeholder="Nhập số điện thoại">
+                            <input data-type="phone" type="text" name="SDT" id="customer-phone"
+                                class="customer-field-input" placeholder="Nhập số điện thoại">
                         </div>
                         <div class="customer-field form-group-email form-group">
                             <label for="customer-email" class="customer-field-label">Email *</label>
-                            <input type="text" name="" id="customer-email" class="customer-field-input"
-                                placeholder="Nhập email">
+                            <input data-type="mail" type="text" name="Email" id="customer-email"
+                                class="customer-field-input" placeholder="Nhập email">
                         </div>
                         <div class="customer-location">
                             <div class="customer-field customer-location-item form-group-city form-group">
                                 <label for="customer-city" class="customer-field-label">Tỉnh/TP *</label>
-                                <select name="" id="customer-city" class="customer-field-input">
+                                <select data-type="select-city" name="Tinh/Thanh Pho" id="customer-city"
+                                    class="customer-field-input">
                                     <option value="" selected disabled hidden>Chọn quận/huyện</option>
                                     <option value="TP.Hồ chí Minh">TP.Hồ chí Minh</option>
                                     <option value="zz">zz</option>
@@ -79,7 +80,8 @@
                             </div>
                             <div class="customer-field customer-location-item form-group-district form-group">
                                 <label for="customer-district" class="customer-field-label">Quận/Huyện *</label>
-                                <select name="" id="customer-district" class="customer-field-input">
+                                <select data-type="select-district" name="Quan/Huyen" id="customer-district"
+                                    class="customer-field-input">
                                     <option value="" selected disabled hidden>Chọn tỉnh/TP</option>
                                     <option value="Thủ Đức">Thủ Đức</option>
                                     <option value="aa">aa</option>
@@ -98,7 +100,7 @@
                             </div>
                         </div>
                         <div class="customer-field customer-terms form-group-terms form-group">
-                            <input type="checkbox" name="" id="checkbox-terms">
+                            <input data-type="terms" type="checkbox" name="Futa Terms" id="checkbox-terms">
                             <label for="checkbox-terms" class="customer-terms-label">
                                 Chấp nhận
                                 <span class="customer-terms-link">điều khoản đặt vé</span>
@@ -135,6 +137,12 @@
                 </div>
             </div>
         </div>
+    </section>
+    <!-- error -->
+    <section class="error">
+        <ul class="error-list">
+            <li class="error-item">fs</li>
+        </ul>
     </section>
     <!-- step nav -->
     <section class="step-nav">
