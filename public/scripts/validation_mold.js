@@ -18,6 +18,12 @@ function onFormSubmit() {
     });
 
     alertError(errors);
+
+    if (errors.length === 0) {
+        console.log('Khong co loi');
+    } else {
+        console.error('On User Input Error!');
+    }
 }
 
 function checkError(input, errors) {
@@ -48,41 +54,61 @@ function alertError(errors) {
     }
 }
 
+function CheckEmpty(valueCheck) {
+    return valueCheck === '';
+}
+
 // Rules
 var validateRules = {
     isRequired: function (input) {
-        let value = input.value;
+        let value = input.value.trim();
         let name = input.getAttribute('name');
 
         if (input.dataset.type === 'terms') {
             return (input.checked === false) ? `Chưa đồng ý điều khoản ${name}` : undefined;
         }
 
-        return (value.trim() === '') ? `Chưa nhập thông tin ${name}` : undefined;
+        return (value === '') ? `Chưa nhập thông tin ${name}` : undefined;
     },
 
     name: function (input) {
         if (input.dataset.type !== 'name') return;
 
-        let value = input.value;
+        let value = input.value.trim();
         let name = input.getAttribute('name');
 
-        return value.trim().length <= 5 ? `Thông tin ${name} chưa đúng` : undefined;
+        return (value.length <= 5 && !CheckEmpty(value)) ? `Thông tin ${name} chưa đúng` : undefined;
     },
 
-    // phone: function (input) {
-    //     if (input.dataset.type !== 'phone') return;
+    phone: function (input) {
+        if (input.dataset.type !== 'phone') return;
 
-    //     let value = input.value;
-    //     let name = input.getAttribute('name');
-    // },
+        let value = input.value.trim();
+        let name = input.getAttribute('name');
 
-    // email: function (input) {
-    //     if (input.dataset.type !== 'email') return;
+        if (CheckEmpty(value)) return undefined;
 
-    //     let value = input.value;
-    //     let name = input.getAttribute('name');
-    // },
+        if (value.length <= 9 || isNaN(value)) {
+            return `${name} phải là số và tối thiểu 10 số`;
+        } else {
+            return undefined;
+        }
+    },
+
+    email: function (input) {
+        if (input.dataset.type !== 'mail') return;
+
+        let value = input.value.trim();
+        let name = input.getAttribute('name');
+        let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (CheckEmpty(value)) return undefined;
+
+        if (regex.test(value)) {
+            return undefined;
+        } else {
+            return `Vui lòng nhập đúng ${name}`;
+        }
+    },
 
     // password: function (input) {
     //     if (input.dataset.type !== 'password') return;
@@ -92,16 +118,21 @@ var validateRules = {
     // },
 
     // select: function (input) {
-    //     if (input.dataset.type !== 'select-city' || input.dataset.type !== 'select-district') return;
+    //     if (input.dataset.type !== 'select') return;
 
     //     let value = input.value;
     //     let name = input.getAttribute('name');
+
+    //     if(CheckEmpty(value)) return undefined;
+
     // },
 
     // checkbox: function (input) {
     //     if (input.dataset.type !== 'terms') return;
 
-    //     let value = input.value;
+    //     let value = input.checked;
     //     let name = input.getAttribute('name');
+
+    //     if()
     // }
 }
