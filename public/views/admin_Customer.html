@@ -192,7 +192,7 @@
             <div class="data-popup">
                 <div class="data-popup-title">Thêm dữ liệu</div>
                 <div class="data-popup-close"><i class='bx bx-x'></i></div>
-                <form action="" class="data-form admin-form">
+                <form action="" class="data-form admin-form form-validation">
                     <div class="form-group data-form-group">
                         <label class="data-form-label" for="customer-id">ID:</label>
                         <input class="data-form-input" type="text" name="customer-id" id="customer-id">
@@ -223,7 +223,7 @@
                     </div>
                     <div class="form-submit data-form-submit">
                         <div class="data-form-btn data-form-clear">clear all</div>
-                        <div class="data-form-btn data-form-accept">accept</div>
+                        <div class="data-form-btn data-form-accept form-submit-validation">accept</div>
                     </div>
                 </form>
             </div>
@@ -525,9 +525,16 @@
                 <div class="data-navigation"></div>
             </div>
         </section>
+        <!-- error -->
+        <section class="error">
+            <ul class="error-list">
+                <li class="error-item">fs</li>
+            </ul>
+        </section>
     </div>
     <script src="./../scripts/dashboardMenu.js"></script>
     <script src="./../scripts/adminAction.js"></script>
+    <script src="./../scripts/validation_mold.js"></script>
 </body>
 
 </html>

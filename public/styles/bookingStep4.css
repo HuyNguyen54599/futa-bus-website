@@ -971,6 +971,39 @@ body {
   }
 }
 
+.error {
+  background-color: #ef5222;
+  color: white;
+  letter-spacing: 0.05rem;
+  text-indent: -0.05rem;
+  font-size: 1.3rem;
+  padding: 2rem;
+  max-width: fit-content;
+  position: fixed;
+  top: 50%;
+  right: 1.5rem;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(calc(100% + 1.6rem));
+  transition: all 0.2s ease-out;
+}
+.error.error-validation-active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+}
+.error-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: normal;
+}
+.error-item {
+  line-height: 1.5;
+}
+
 .footer {
   background-color: #f6f6f6;
   border-top: 0.5px solid rgba(151, 151, 151, 0.5);
